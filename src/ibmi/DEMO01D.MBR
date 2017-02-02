@@ -1,0 +1,32 @@
+     A*%%TS  SD  20151104  194112  DKUZNETSOV  REL-V6R1M0  5761-WDS
+     A*================================================================
+     A*  C R E A T I O N     P A R A M E T E R S                      *
+     A*CRT: CRTDSPF RSTDSP(*YES)                                     :*
+     A*================================================================
+     A*%%EC
+     A*%%FD AS400 to Mule demo
+     A                                      DSPSIZ(24 80 *DS3)
+     A***                                   OVERLAY
+     A          R MAIN
+     A*%%TS  SD  20151104  194112  DKUZNETSOV  REL-V6R1M0  5761-WDS
+     A                                      CF03(03 'EXIT')
+     A                                 22  2'F3=Exit'
+     A                                      COLOR(BLU)
+     A                                  1 70DATE
+     A                                      EDTCDE(Y)
+     A                                  2 70TIME
+     A                                  1  3USER
+     A                                  2  3SYSNAME
+     A                                  2 27'AS400 to Mule Demo'
+     A                                      COLOR(WHT)
+     A                                  9  4'From currency code:'
+     A                                 10  4'To currency code:'
+     A                                  8  4'Amount to convert:'
+     A                                 12  4'Mule response:'
+     A                                 13  4'Converted Amount:'
+     A            AMOUNT        11Y 2B  8 26EDTWRD('         .  ')
+     A                                      COLOR(WHT)
+     A            FROMCCY        3A  B  9 26COLOR(WHT)
+     A            TOCCY          3A  B 10 26COLOR(WHT)
+     A            MULERESP      50   O 12 26
+     A            TOAMOUNT      11Y 2O 13 26EDTWRD('         .  ')
